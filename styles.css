@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background-color: #210D41;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    height: 100vh;
+}
+
+.name {
+    font-size: 65px;
+    justify-content: center;
+    align-items: center;
+}
+
+.job_title {
+    font-size: 30px;
+}
+
+.btn-con {
+    margin-top: 40px;
+}
+
+.main-btn {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #FF0099;
+    color: white;
+    text-decoration: none;
+    border-radius: 2%;
+    font-size: 20px;
+}
+
+.footer {
+    background-color: #210D41;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-content p {
+    color: white;
+    padding-bottom: 1%;
+    font-size: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 60px;
+    margin-right: 15px;
+}
+
+/* -----------------------NavBar---------------------- */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #210D41;
+    padding: 20px 0;
+}
+
+.navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #FF0099; /* Bordure rose */
+    padding: 10px;
+    border-radius: 5px; 
+}
+
+.navbar-list li {
+    margin: 0 20px; /* Espacement entre les éléments de la navbar */
+}
+
+.navbar-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Styles pour le menu burger (mobile) */
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Styles pour les médias queries */
+
+/* Pour les écrans larges (ordinateurs) */
+@media screen and (min-width: 992px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .navbar-list {
+        display: flex;
+    }
+}
+
+/* Pour les téléphones et tablettes (format mobile) */
+@media screen and (max-width: 991px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+    }
+
+    .navbar-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .navbar-list.active {
+        display: flex;
+    }
+
+    .navbar-list li {
+        margin: 10px 0; /* Espacement entre les éléments de la navbar pour les téléphones */
+    }
+}
+
